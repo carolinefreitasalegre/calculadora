@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,84,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+    margin-left: 90%;
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+    
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+    
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon,1.4em);
+    width: var(--size-of-icon,1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset,0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: black;
+    
+   transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: white;
+  }
+  
+  input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: rgba(0,212,255,1);
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    
+  }
+
+
+
+main{
+   width: 25%;
+   flex-direction: column row-reverse;
+   padding-top: 10px; 
+   margin: auto;
+   margin-top: 10%;
+   align-items: center;
+   background-color: rgba(0, 128, 128, 0.038);
+   box-shadow: 2px 2px 5px black;
+   border-radius: 10px;
+   padding-bottom: 2%;
+}
+.calculadora{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    gap: 10px;
+    margin-left: 18%;
+    justify-content: center;
+
+}
+p{ 
+    margin-top: 10%;
+    margin-left: 20.5%;
+    outline: none;
+    background-color: rgba(199, 180, 180, 0.785);
+    border: none;
+    border-radius: 10px;
+    width: 60%; 
+    height: 50px;  
+    padding: 20px;
+    text-align: end;
+    align-items: center;
+
+}
+
+#botao{
+    padding: 15px;
+    border-radius: 10px;
+    width: 15%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+    border: none;
+}
+#botao:hover{
+    background-color: rgba(0, 0, 0, 0.205);
+}
+#igual{
+    display: flex;
+    height: 100px;
+    width: 54px;
+    border-radius: 10px;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    cursor: pointer;
+    
+}
+#igual:hover{
+    background-color: rgba(0, 0, 0, 0.205);
+}
+.column04{
+    display: flex;
+    flex-direction: row;
+    height:45px;
+    gap: 4px;
+}
