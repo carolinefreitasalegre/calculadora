@@ -143,3 +143,20 @@ p{
     height:45px;
     gap: 4px;
 }
+
+@media (max-width:1245px) {
+  #botao{
+    padding: 15px;
+    text-align: center;
+  }
+  #igual{
+    max-width: 90%;
+    max-height: 230%;
+  }
+  .apagar{
+    text-align: center;
+  }
+  main{
+    width: 80%;
+  }
+}
